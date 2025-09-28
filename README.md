@@ -1,6 +1,77 @@
-# Getting Started with Create React App
+# Carbon Credits Dashboard
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A React-based dashboard for viewing and managing carbon credits with search functionality and certificate generation.
+
+## Setup Instructions
+
+```bash
+npm install
+npm start
+```
+
+Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+
+## Features
+
+- Display carbon credits from JSON data
+- Search/filter by project name or vintage
+- Status badges (Active/Retired)
+- Download retirement certificates
+
+## Reflection Questions
+
+### How did you decide what to show on the main page vs details?
+
+I decided to show the essential information on the main page - project name, UNIC ID, vintage, and status. This gives users a quick overview of each credit without cluttering the interface. I considered adding a separate details page but felt that for this dataset size, showing all info on cards was sufficient.
+
+// TODO: might want to add modal or separate detail view for larger datasets
+
+### What design choices did you make to keep it clean?
+
+- Used a card-based layout for easy scanning
+- Limited color palette (green for active, gray for retired)
+- Consistent spacing and typography
+- Clear visual hierarchy with project names as headers
+- Simple search bar at the top
+
+// Areas I could improve:
+// - Add loading states
+// - Better responsive design
+// - More consistent button styling
+
+### If the system had 10,000 credits, how would you keep the dashboard fast?
+
+For 10,000 credits, I would implement:
+
+1. **Pagination** - Show 20-50 credits per page
+2. **Virtual scrolling** - Only render visible cards
+3. **Search optimization** - Debounced search input
+4. **Data optimization** - Load minimal data initially, fetch details on demand
+
+```javascript
+// Example pagination implementation I'd add:
+// const [currentPage, setCurrentPage] = useState(1);
+// const creditsPerPage = 50;
+// const startIndex = (currentPage - 1) * creditsPerPage;
+// const paginatedCredits = filteredCredits.slice(startIndex, startIndex + creditsPerPage);
+```
+
+## Known Issues / TODO
+
+- [ ] Add loading states for certificate generation
+- [ ] Implement proper error handling
+- [ ] Add unit tests
+- [ ] Improve responsive design for mobile
+- [ ] Add pagination for large datasets
+- [ ] Consider adding PDF generation instead of HTML
+
+## Technologies Used
+
+- React 18
+- CSS3
+- HTML5 Certificate Generation
+
+---
 
 ## Available Scripts
 

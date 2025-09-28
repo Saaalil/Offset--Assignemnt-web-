@@ -1,0 +1,66 @@
+/* Credit Card Styles */
+.credit-card {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  transition: box-shadow 0.3s ease;
+  border: 1px solid #e1e5e9;
+}
+
+.credit-card:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  /* transform: translateY(-2px); maybe add this animation? */
+}
+
+.credit-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 15px;
+  /* border-bottom: 1px solid #eee; testing border */
+  padding-bottom: 10px;
+}
+
+.project-name {
+  margin: 0;
+  font-size: 1.2rem;
+  color: #2c5530;
+  flex: 1;
+  margin-right: 10px;
+}
+
+.credit-details {
+  margin-bottom: 20px;
+}
+
+.detail-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+  padding: 5px 0;
+}
+
+.label {
+  font-weight: 600;
+  color: #666;
+}
+
+.value {
+  color: #2c5530;
+  font-weight: 500;
+}
+
+.credit-actions {
+  /* display: flex;
+  gap: 10px; */
+}
+
+/* .view-details-btn {
+  background: #f8f9fa;
+  border: 1px solid #dee2e6;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  color: #495057;
+} */
